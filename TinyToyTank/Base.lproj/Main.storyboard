@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="TinyToyTank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yG-hi-fxi">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrK-mA-QU3" userLabel="arView">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsQ-xK-e1f" userLabel="turretRightButton">
+                                <rect key="frame" x="796" y="314" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Dni-Q9-sdX"/>
+                                    <constraint firstAttribute="width" constant="80" id="Nge-wa-Pau"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="TurretRight"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="turretRightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H42-6r-dzK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbB-L8-cll" userLabel="moveRightButton">
+                                <rect key="frame" x="154" y="314" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="CCs-6Y-toO"/>
+                                    <constraint firstAttribute="width" constant="80" id="Sq6-gN-tgW"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="TankRight"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="moveRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2p-we-6pR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWz-BX-Ssn" userLabel="moveLeftButton">
+                                <rect key="frame" x="64" y="314" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="BRA-Gl-Ot6"/>
+                                    <constraint firstAttribute="height" constant="80" id="W3m-37-8rw"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="TankLeft"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="moveLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lig-jA-mUd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c4-W9-Zba" userLabel="moveForwardButton">
+                                <rect key="frame" x="109" y="224" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5BE-jY-bNf"/>
+                                    <constraint firstAttribute="width" constant="80" id="tHJ-DO-5RE"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="TankForward"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="moveForwardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agZ-C9-7Ic"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBZ-0W-voN" userLabel="turretLeftButton">
+                                <rect key="frame" x="706" y="314" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QpY-0d-Vxi"/>
+                                    <constraint firstAttribute="width" constant="80" id="ReV-z2-8O6"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="TurretLeft"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="turretLeftButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpE-KQ-8d1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeh-IQ-gtD" userLabel="fireButton">
+                                <rect key="frame" x="751" y="224" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="OGx-fC-sAi"/>
+                                    <constraint firstAttribute="width" constant="80" id="YiV-uq-Eys"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="CannonFire"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="fireButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NPC-av-2fZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zfh-6D-sIL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nrK-mA-QU3" secondAttribute="bottom" id="4bH-zC-5Yu"/>
+                            <constraint firstItem="gsQ-xK-e1f" firstAttribute="top" secondItem="jeh-IQ-gtD" secondAttribute="bottom" constant="10" id="Bxm-11-lEP"/>
+                            <constraint firstAttribute="bottom" secondItem="gsQ-xK-e1f" secondAttribute="bottom" constant="20" id="Fcy-9w-et3"/>
+                            <constraint firstAttribute="bottom" secondItem="lBZ-0W-voN" secondAttribute="bottom" constant="20" id="MNW-k0-now"/>
+                            <constraint firstItem="WbB-L8-cll" firstAttribute="bottom" secondItem="8yG-hi-fxi" secondAttribute="bottom" constant="-20" id="Q18-qO-VBY"/>
+                            <constraint firstItem="nrK-mA-QU3" firstAttribute="leading" secondItem="8yG-hi-fxi" secondAttribute="leading" id="QG0-TJ-IzP"/>
+                            <constraint firstItem="gsQ-xK-e1f" firstAttribute="leading" secondItem="lBZ-0W-voN" secondAttribute="trailing" constant="10" id="ZTh-q0-ezd"/>
+                            <constraint firstItem="nrK-mA-QU3" firstAttribute="trailing" secondItem="8yG-hi-fxi" secondAttribute="trailing" id="cFP-8x-xr7"/>
+                            <constraint firstItem="BWz-BX-Ssn" firstAttribute="bottom" secondItem="8yG-hi-fxi" secondAttribute="bottom" constant="-20" id="lka-yn-ddc"/>
+                            <constraint firstItem="WbB-L8-cll" firstAttribute="leading" secondItem="BWz-BX-Ssn" secondAttribute="trailing" constant="10" id="pog-Xj-8us"/>
+                            <constraint firstItem="WbB-L8-cll" firstAttribute="top" secondItem="0c4-W9-Zba" secondAttribute="bottom" constant="10" id="q3f-jL-6zE"/>
+                            <constraint firstItem="0c4-W9-Zba" firstAttribute="leading" secondItem="BWz-BX-Ssn" secondAttribute="leading" constant="45" id="reJ-nC-9cX"/>
+                            <constraint firstItem="nrK-mA-QU3" firstAttribute="top" secondItem="8yG-hi-fxi" secondAttribute="top" id="tBa-FA-q9W"/>
+                            <constraint firstItem="BWz-BX-Ssn" firstAttribute="leading" secondItem="zfh-6D-sIL" secondAttribute="leading" constant="20" id="unF-XQ-a1E"/>
+                            <constraint firstAttribute="trailing" secondItem="gsQ-xK-e1f" secondAttribute="trailing" constant="20" id="yhE-aK-s1U"/>
+                            <constraint firstItem="gsQ-xK-e1f" firstAttribute="trailing" secondItem="jeh-IQ-gtD" secondAttribute="trailing" constant="45" id="ysQ-de-y3f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="nrK-mA-QU3" id="cbA-AW-6eS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CannonFire" width="192" height="192"/>
+        <image name="TankForward" width="192" height="192"/>
+        <image name="TankLeft" width="192" height="192"/>
+        <image name="TankRight" width="192" height="192"/>
+        <image name="TurretLeft" width="192" height="192"/>
+        <image name="TurretRight" width="192" height="192"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
